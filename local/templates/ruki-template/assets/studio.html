@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="lgThumbnail" href="css/lg-thumbnail.css" />
+    <link rel="lgZoom" href="css/lg-zoom.css" />
+    <link rel="stylesheet" href="css/lightgallery.css" />
+    <link rel="stylesheet" href="css/lightgallery-bundle.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <img src="images/logo.svg" alt="" class="logo" />
+        <ul class="navigation">
+          <li class="navigatio__item">О нас</li>
+          <li class="navigatio__item">Товары и услуги</li>
+          <li class="navigatio__item">Наши студии</li>
+          <li class="navigatio__item">Система скидок</li>
+          <li class="navigatio__item">Доставка</li>
+          <li class="navigatio__item">Контакты</li>
+        </ul>
+        <a class="number" href="tel:+7(928)-07-07-557">+7(928)-07-07-557</a>
+
+        <div class="menu__burger-icon">
+          <div class="hamb__field" id="hamb">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+        <div class="popup" id="popup"></div>
+      </div>
+    </header>
+    <a href="#" class="icon scroll-arrow">
+      <img src="images/scroll-arrow.png" alt="" />
+    </a>
+
+    <div class="breadcrumbs-container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">Главная</li>
+        <li class="breadcrumbs__item">Наши студии</li>
+      </ul>
+      <h1 class="breadcrumbs__title">Наши студии</h1>
+    </div>
+
+    <div class="container-small">
+      <div class="studios">
+        <div class="studio__item">
+          <div class="studio__img_container">
+            <div class="studio__item_images">
+              <div class="studio__images_left">
+                <img
+                  src="images/photo-studios1.png"
+                  alt=""
+                  class="studio__images_left1"
+                />
+              </div>
+              <img
+                src="images/photo-studios3.png"
+                alt=""
+                class="studio__images_right1"
+              />
+              <img
+                src="images/photo-studios2.png"
+                alt=""
+                class="studio__images_right2"
+              />
+            </div>
+            <div class="studio__search_container">
+              <img class="studio__img_search" src="/images/search.svg" alt="" />
+            </div>
+          </div>
+          <div class="studio__item_content">
+            <h3 class="studio__item_title">Цветочная студия Flowers</h3>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Адреса магазина:</p>
+              <p class="studio__item_text">Кронверкский пр., 75</p>
+            </div>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Телефон:</p>
+              <p class="studio__item_text">+7 900 000 27 09</p>
+            </div>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Время работы:</p>
+              <p class="studio__item_text">
+                ПН-ПТ с 09:00 до 21:00, СБ-ВС с 10:00 до 20:00
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="studio__item">
+          <div class="studio__img_container">
+            <div class="studio__item_images">
+              <div class="studio__images_left">
+                <img
+                  src="images/photo-studios1.png"
+                  alt=""
+                  class="studio__images_left1"
+                />
+              </div>
+              <img
+                src="images/photo-studios3.png"
+                alt=""
+                class="studio__images_right1"
+              />
+              <img
+                src="images/photo-studios2.png"
+                alt=""
+                class="studio__images_right2"
+              />
+            </div>
+            <div class="studio__search_container">
+              <img class="studio__img_search" src="/images/search.svg" alt="" />
+            </div>
+          </div>
+          <div class="studio__item_content">
+            <h3 class="studio__item_title">Цветочная студия Flowers</h3>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Адреса магазина:</p>
+              <p class="studio__item_text">Кронверкский пр., 75</p>
+            </div>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Телефон:</p>
+              <p class="studio__item_text">+7 900 000 27 09</p>
+            </div>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Время работы:</p>
+              <p class="studio__item_text">
+                ПН-ПТ с 09:00 до 21:00, СБ-ВС с 10:00 до 20:00
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="studio__item">
+          <div class="studio__img_container">
+            <div class="studio__item_images" id="lightgallery">
+              <a href="images/photo-studios1.png" class="studio__images_left">
+                <img
+                  src="images/photo-studios1.png"
+                  alt=""
+                  class="studio__images_left1"
+                />
+              </a>
+              <a href="images/photo-studios3.png">
+                <img
+                  src="images/photo-studios3.png"
+                  alt=""
+                  class="studio__images_right1"
+                />
+              </a>
+              <a href="images/photo-studios2.png">
+                <img
+                  src="images/photo-studios2.png"
+                  alt=""
+                  class="studio__images_right2"
+                />
+              </a>
+            </div>
+
+            <div class="studio__search_container">
+              <img class="studio__img_search" src="/images/search.svg" alt="" />
+            </div>
+          </div>
+          <div class="studio__item_content">
+            <h3 class="studio__item_title">Цветочная студия Flowers</h3>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Адреса магазина:</p>
+              <p class="studio__item_text">Кронверкский пр., 75</p>
+            </div>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Телефон:</p>
+              <p class="studio__item_text">+7 900 000 27 09</p>
+            </div>
+            <div class="studio__item_contacts">
+              <p class="studio__item_title">Время работы:</p>
+              <p class="studio__item_text">
+                ПН-ПТ с 09:00 до 21:00, СБ-ВС с 10:00 до 20:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="locations">
+        <h2 class="block-title">Наши магазины на карте</h2>
+        <div class="map" id="map"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="contacts">
+            <div class="contacts__item">
+              <img src="images/icon-gps.png" alt="" />
+              <p class="contacts__text">г. Владикавказ, ул. Джанаева, д. 37</p>
+            </div>
+            <div class="contacts__item">
+              <img src="images/email.png" alt="" />
+              <a
+                class="contacts__text"
+                href="mailto:ruki-design-studio@yandex.ru"
+                >ruki-design-studio@yandex.ru</a
+              >
+            </div>
+            <div class="contacts__item">
+              <img src="images/phone.png" alt="" />
+              <p class="contacts__phone">+7(928)07-07-557</p>
+            </div>
+            <a href="" class="link-beige feedback-btn"
+              >Обратная связь <img src="images/studio-arrow.svg" alt=""
+            /></a>
+          </div>
+          <div class="menu">
+            <ul class="menu__column">
+              <li class="menu__item">О нас</li>
+              <li class="menu__item">Товары и услуги</li>
+              <li class="menu__item">Наши студии</li>
+            </ul>
+            <ul class="menu__column">
+              <li class="menu__item">Система скидок</li>
+              <li class="menu__item">Доставка</li>
+              <li class="menu__item">Контакты</li>
+            </ul>
+          </div>
+          <div class="network">
+            <p class="network__text">Мы в соцсетях и мессенджерах:</p>
+            <div class="network__icons">
+              <div class="icon"><img src="images/vk.png" alt="" /></div>
+              <div class="icon"><img src="images/telega.png" alt="" /></div>
+              <div class="icon"><img src="images/watsapp.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="" class="footer__bottom_text">Политика конфиденциальности</a>
+          <a href="" class="footer__bottom_text">Разработка сайта</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=ваш API-ключ&?apikey=ваш API-ключ&load=package.standard&lang=ru-RU"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lg-thumbnail.umd.js"></script>
+    <script src="js/lg-zoom.umd.js"></script>
+    <script src="js/lightgallery.umd.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script type="text/javascript">
+      lightGallery(document.getElementById("lightgallery"), {
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: "your_license_key",
+        speed: 500,
+        // ... other settings
+      });
+    </script>
+    <script>
+      function init() {
+        let map = new ymaps.Map("map", {
+          center: [43.04545166274155, 44.67198985350388], // ваши данные
+          zoom: 13,
+        });
+
+        let placemark = new ymaps.Placemark(
+          [43.03158257448738, 44.68968499999997],
+          {
+            balloonContent: `
+      <div class="balloon">
+        <div class="balloon__address">ул. Ватутина, 51, Владикавказ</div>
+      </div>
+    `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "../images/icon-gps-map.png",
+            iconImageSize: [56, 56],
+            iconImageOffset: [-25, -50],
+          }
+        );
+        let placemark4 = new ymaps.Placemark(
+          [43.05881357450824, 44.66508949999998],
+          {
+            balloonContent: `
+      <div class="balloon">
+        <div class="balloon__address">ул. Пожарского, 5, Владикавказ</div>
+      </div>
+    `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "../images/icon-gps-map.png",
+            iconImageSize: [56, 56],
+            iconImageOffset: [-25, -50],
+          }
+        );
+        let placemark2 = new ymaps.Placemark(
+          [43.03309857449133, 44.68330699999999],
+          {
+            balloonContent: `
+      <div class="balloon">
+        <div class="balloon__address">ул. Джанаева, 37, Владикавказ</div>
+      </div>
+    `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "../images/icon-gps-map.png",
+            iconImageSize: [56, 56],
+            iconImageOffset: [-25, -50],
+          }
+        );
+
+        let placemark3 = new ymaps.Placemark(
+          [43.04864857448196, 44.632740999999946],
+          {
+            balloonContent: `
+      <div class="balloon">
+        <div class="balloon__address">Владикавказская ул., 26, Владикавказ</div>
+      </div>
+    `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "../images/icon-gps-map.png",
+            iconImageSize: [56, 56],
+            iconImageOffset: [-25, -50],
+          }
+        );
+        map.controls.remove("geolocationControl"); // удаляем геолокацию
+        map.controls.remove("searchControl"); // удаляем поиск
+        map.controls.remove("trafficControl"); // удаляем контроль трафика
+        map.controls.remove("typeSelector"); // удаляем тип
+        map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+        map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+        map.controls.remove("rulerControl"); // удаляем контрол правил
+        map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+        map.geoObjects.add(placemark);
+        map.geoObjects.add(placemark2);
+        map.geoObjects.add(placemark3);
+        map.geoObjects.add(placemark4);
+      }
+
+      ymaps.ready(init);
+    </script>
+  </body>
+</html>

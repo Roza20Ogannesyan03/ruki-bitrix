@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="lgThumbnail" href="css/lg-thumbnail.css" />
+    <link rel="lgZoom" href="css/lg-zoom.css" />
+    <link rel="stylesheet" href="css/lightgallery.css" />
+    <link rel="stylesheet" href="css/lightgallery-bundle.min.css" />
+  </head>
+  <body>
+    <div class="PermalinkOverlay" id="permalink-overlay" style="display: block">
+      <header class="header">
+        <div class="header__container container">
+          <img src="images/logo.svg" alt="" class="logo" />
+          <ul class="navigation">
+            <li class="navigatio__item">О нас</li>
+            <li class="navigatio__item">Товары и услуги</li>
+            <li class="navigatio__item">Наши студии</li>
+            <li class="navigatio__item">Система скидок</li>
+            <li class="navigatio__item">Доставка</li>
+            <li class="navigatio__item">Контакты</li>
+          </ul>
+          <a class="number" href="tel:+7(928)-07-07-557">+7(928)-07-07-557</a>
+
+          <div class="menu__burger-icon">
+            <div class="hamb__field" id="hamb">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          <div class="popup" id="popup"></div>
+        </div>
+      </header>
+
+      <div id="modal-callback" class="modal">
+        <div class="modal-content">
+          <div class="close">
+            <div class="close__img">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.94367 27.9954C4.70304 27.9954 4.46004 27.9034 4.27602 27.7194C3.90799 27.3514 3.90799 26.7546 4.27602 26.3842L26.3863 4.27612C26.7544 3.90812 27.3536 3.90812 27.7216 4.27612C28.0897 4.64412 28.0897 5.24093 27.7216 5.61129L5.60896 27.7218C5.42495 27.9058 5.18431 27.9978 4.94132 27.9978L4.94367 27.9954Z"
+                  fill="#DDDDDD"
+                />
+                <path
+                  d="M27.054 27.9952C26.8133 27.9952 26.5703 27.9032 26.3863 27.7192L4.27602 5.60872C3.90799 5.24073 3.90799 4.64391 4.27602 4.27356C4.64406 3.90556 5.24329 3.90556 5.61132 4.27356L27.724 26.384C28.092 26.752 28.092 27.3489 27.724 27.7192C27.54 27.9032 27.2993 27.9952 27.0563 27.9952H27.054Z"
+                  fill="#DDDDDD"
+                />
+              </svg>
+            </div>
+          </div>
+          <h1 class="modal__title">Форма обратной связи</h1>
+          <p class="modal__subtitle">
+            Здесь Вы можете отправить сообщение в адрес  администрации сайта. Мы
+            внимательно ознакомимся со всеми Вашими пожеланиями и предложениями
+          </p>
+          <form
+            id="form_feedback"
+            action="/ajax/form.php"
+            method="post"
+            class="modal__form"
+            onsubmit="return submitForm(this)"
+            enctype="multipart/form-data"
+          >
+            <label for="name">Ваше имя</label>
+            <input
+              class="inputs"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите имя"
+            />
+
+            <label for="email">Ваш e-mail</label>
+            <input
+              class="inputs"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Введите e-mail"
+            />
+            <p class="hint">Мы отправим ответ на обращение по данному адресу</p>
+
+            <label for="number">Ваш телефон</label>
+            <input
+              class="inputs"
+              type="tel"
+              name="number"
+              id="number"
+              placeholder="Введите телефон"
+            />
+            <p class="hint">
+              В случае необходимости, мы свяжемся с Вами по этому номеру
+            </p>
+            <label for="message">Текст сообщения</label>
+            <textarea
+              class="inputs message"
+              name="message"
+              id="message"
+              placeholder="Введите сообщение..."
+            ></textarea>
+
+            <div class="capcha">
+              <div class="capcha__code">
+                <img src="images/captcha.png" alt="" />
+              </div>
+              <input
+                type="text"
+                name="capcha_input"
+                id="capcha_input"
+                class="inputs capcha_input"
+                placeholder="Введите символы с картинки"
+              />
+            </div>
+
+            <button class="modal__button">
+              <p class="link-white">Отправить</p>
+            </button>
+
+            <div class="polit">
+              <p>Нажимая на кнопку "Отправить", вы соглашаетесь на</p>
+              <a class="polit__link" href="/politika/"
+                >обработку персональных данных</a
+              >
+            </div>
+
+            <div class="response"></div>
+          </form>
+        </div>
+      </div>
+
+      <a href="#" class="icon scroll-arrow">
+        <img src="images/scroll-arrow.png" alt="" />
+      </a>
+      <div class="cookie">
+        <p class="cookie__text">
+          Используя сайт сети магазинов «Руки», я даю согласие на обработку моих
+          персональных данных с использованием сторонних сервисов и принимаю
+          условия Политики Конфиденциальности
+        </p>
+        <div class="link-beige link-white cookie_btn">Хорошо</div>
+      </div>
+      <div class="slider">
+        <div class="swiper" id="slider">
+          <div class="swiper-wrapper" id="wrapper">
+            <!-- Slides -->
+            <div
+              class="swiper-slide image-overlay"
+              style="background-image: url('images/photo-slider.png')"
+            >
+              <div class="container">
+                <div class="slide__text">
+                  <span class="line"></span>
+                  <h1 class="slide__text_title">
+                    Волшебство <br />
+                    праздника в каждой детали
+                  </h1>
+                  <p class="slide__text_subtitle">
+                    Воплощаем мечты в праздничном оформлении!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide image-overlay"
+              style="background-image: url('images/photo-slider.png')"
+            >
+              <div class="container">
+                <div class="slide__text">
+                  <span class="line"></span>
+                  <h1 class="slide__text_title">
+                    Волшебство <br />праздника в каждой детали
+                  </h1>
+                  <p class="slide__text_subtitle">
+                    Воплощаем мечты в праздничном оформлении!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide image-overlay"
+              style="background-image: url('images/photo-slider.png')"
+            >
+              <div class="container">
+                <div class="slide__text">
+                  <span class="line"></span>
+                  <h1 class="slide__text_title">
+                    Волшебство <br />
+                    праздника в каждой детали
+                  </h1>
+                  <p class="slide__text_subtitle">
+                    Воплощаем мечты в праздничном оформлении!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide image-overlay"
+              style="background-image: url('images/photo-slider.png')"
+            >
+              <div class="container">
+                <div class="slide__text">
+                  <span class="line"></span>
+                  <h1 class="slide__text_title">
+                    Волшебство <br />
+                    праздника в каждой детали
+                  </h1>
+                  <p class="slide__text_subtitle">
+                    Воплощаем мечты в праздничном оформлении!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="arrows">
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev_sl">
+            <img src="images/prev.svg" alt="" />
+          </div>
+          <div class="swiper-button-next_sl">
+            <img src="images/next.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="studio">
+        <div class="studio__img-container">
+          <img src="images/studio.jpg" alt="" class="studio__img" />
+        </div>
+        <div class="studio__right">
+          <div class="studio__text-wrapper">
+            <h2 class="block-title">О нашей студии</h2>
+
+            <p class="studio__text">
+              Добро пожаловать в нашу студию праздничного дизайна, где каждое
+              событие превращается в уникальное и волшебное путешествие!
+              <br />
+              <br />
+              Мы - команда творческих энтузиастов, преданная искусству создания
+              неповторимых праздничных моментов.
+            </p>
+            <a href="" class="link-beige"
+              >Подробнее <img src="images/studio-arrow.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="promotion">
+        <div class="promotion__content">
+          <h2 class="block-title">Специальное предложение!</h2>
+
+          <div class="promotion__bottom">
+            <img class="img-20" src="images/img-20.png" alt="" />
+            <p class="promotion__text">
+              каждый вторник на все виды воздушных шаров
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bouquet__background">
+        <div class="container">
+          <div class="swiper" id="bouquet">
+            <!-- Additional required wrapper -->
+            <h2 class="block-title">Выбор покупателя</h2>
+            <div class="swiper-wrapper bouquet__wrapper" id="lightgallery">
+              <!-- Slides -->
+              <a
+                href="images/bouquet-1.jpg"
+                class="swiper-slide bouquet__slide"
+                data-sub-html="Авторский букет в нежной гамме"
+              >
+                <img class="bouquet__img" src="images/bouquet-1.jpg" alt="" />
+                <h4 class="bouquet__title">Авторский букет в нежной гамме</h4>
+                <p class="bouquet__subtitle">
+                  Нежно-розовые пионы, светло-голубая лаванда и белых
+                  альстромерий, дополненных нежно-желтыми акцентами
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-2.jpg"
+                data-sub-html="Летний букет в нежной гамме"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-2.jpg" alt="" />
+                <h4 class="bouquet__title">Летний букет в нежной гамме</h4>
+                <p class="bouquet__subtitle">
+                  Светло-желтые ромашки, лавандовые лиловцы и нежно-зеленые
+                  веточки зверобоя.
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-3.jpg"
+                data-sub-html="Розовая гармония с зеленью"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-3.jpg" alt="" />
+                <h4 class="bouquet__title">Розовая гармония с зеленью</h4>
+                <p class="bouquet__subtitle">
+                  Этот букет сочетает в себе изысканную розу и живую гвоздику,
+                  обрамленные свежими зелеными листьями
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-4.jpg"
+                data-sub-html="Нежный авторский букет"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-4.jpg" alt="" />
+                <h4 class="bouquet__title">Нежный авторский букет</h4>
+                <p class="bouquet__subtitle">
+                  Нежно-розовые пионы, светло-голубая лаванда и белых
+                  альстромерий, дополненных акцентами хризантем
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-1.jpg"
+                class="swiper-slide bouquet__slide"
+                data-sub-html="Авторский букет в нежной гамме"
+              >
+                <img class="bouquet__img" src="images/bouquet-1.jpg" alt="" />
+                <h4 class="bouquet__title">Авторский букет в нежной гамме</h4>
+                <p class="bouquet__subtitle">
+                  Нежно-розовые пионы, светло-голубая лаванда и белых
+                  альстромерий, дополненных нежно-желтыми акцентами
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-2.jpg"
+                data-sub-html="Летний букет в нежной гамме"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-2.jpg" alt="" />
+                <h4 class="bouquet__title">Летний букет в нежной гамме</h4>
+                <p class="bouquet__subtitle">
+                  Светло-желтые ромашки, лавандовые лиловцы и нежно-зеленые
+                  веточки зверобоя.
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-3.jpg"
+                data-sub-html="Розовая гармония с зеленью"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-3.jpg" alt="" />
+                <h4 class="bouquet__title">Розовая гармония с зеленью</h4>
+                <p class="bouquet__subtitle">
+                  Этот букет сочетает в себе изысканную розу и живую гвоздику,
+                  обрамленные свежими зелеными листьями
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-4.jpg"
+                data-sub-html="Нежный авторский букет"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-4.jpg" alt="" />
+                <h4 class="bouquet__title">Нежный авторский букет</h4>
+                <p class="bouquet__subtitle">
+                  Нежно-розовые пионы, светло-голубая лаванда и белых
+                  альстромерий, дополненных акцентами хризантем
+                </p>
+              </a>
+
+              <a
+                href="images/bouquet-1.jpg"
+                data-sub-html="Авторский букет в нежной гамме"
+                class="swiper-slide bouquet__slide"
+              >
+                <img class="bouquet__img" src="images/bouquet-1.jpg" alt="" />
+                <h4 class="bouquet__title">Авторский букет в нежной гамме</h4>
+                <p class="bouquet__subtitle">
+                  Нежно-розовые пионы, светло-голубая лаванда и белых
+                  альстромерий, дополненных нежно-желтыми акцентами
+                </p>
+              </a>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="arrows bouquet__arrows">
+              <div class="bouquet__swiper-button-prev">
+                <img src="images/prev.svg" alt="" />
+              </div>
+              <div class="bouquet__swiper-button-next">
+                <img src="images/next.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="choice">
+        <h2 class="block-title">Почему выбирают нас?</h2>
+        <div class="choice__content">
+          <div class="choice__content_item">
+            <img src="images/choice1.png" alt="" />
+            <div class="item__text">
+              <p class="choice__title">Стильные букеты</p>
+              <p class="choice__subtitle">
+                Подберем цветовую гамму и уникальные детали для каждого вашего
+                букета!
+              </p>
+            </div>
+          </div>
+
+          <div class="choice__content_item">
+            <img src="images/choice2.png" alt="" />
+            <div class="item__text">
+              <p class="choice__title">Только самые свежие цветы</p>
+              <p class="choice__subtitle">
+                Поставки свежайших цветов для ваших букетов 5 раз в неделю.
+              </p>
+            </div>
+          </div>
+
+          <div class="choice__content_item">
+            <img src="images/choice3.png" alt="" />
+            <div class="item__text">
+              <p class="choice__title">Бережная доставка</p>
+              <p class="choice__subtitle">
+                Перевозка в вазонах с водой или в наших фирменных пакетах
+                сохраняет свежесть букета.
+              </p>
+            </div>
+          </div>
+
+          <div class="choice__content_item">
+            <img src="images/choice4.png" alt="" />
+            <div class="item__text">
+              <p class="choice__title">Вежливые курьеры</p>
+              <p class="choice__subtitle">
+                Самые улыбчивые и пунктуальные курьеры. Всегда опрятные и
+                клиентоориентированные.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog">
+        <h2 class="block-title">Блог</h2>
+        <div class="blog__inner">
+          <div class="blog__item">
+            <img src="images/blog-1.jpg" alt="" class="blog__img" />
+            <div class="blog__calendar">
+              <p class="blog__calendar_day">13</p>
+              <p class="blog__calendar_month">авг</p>
+            </div>
+            <div class="blog__text">
+              <h3 class="blog__inner_title">Памятка по уходу за цветами</h3>
+              <p class="blog__item_text">
+                Подрезать стебли под углом, лучше всего острым секатором, но
+                если его нет, то острым ножом и резкими движениями, таким
+                образом чтобы срез был без заломов и сжатий, таким образом,
+                чтобы срез был без...
+              </p>
+              <a href="" class="blog__button">Далее</a>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <img src="images/blog-2.jpg" alt="" class="blog__img" />
+            <div class="blog__calendar">
+              <p class="blog__calendar_day">13</p>
+              <p class="blog__calendar_month">авг</p>
+            </div>
+            <div class="blog__text">
+              <h3 class="blog__inner_title">Памятка по уходу за цветами</h3>
+              <p class="blog__item_text">
+                Подрезать стебли под углом, лучше всего острым секатором, но
+                если его нет, то острым ножом и резкими движениями, таким
+                образом чтобы срез был без заломов и сжатий, таким образом,
+                чтобы срез был без...
+              </p>
+              <a href="" class="blog__button">Далее</a>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <img src="images/blod-3.png" alt="" class="blog__img" />
+            <div class="blog__calendar">
+              <p class="blog__calendar_day">13</p>
+              <p class="blog__calendar_month">авг</p>
+            </div>
+            <div class="blog__text">
+              <h3 class="blog__inner_title">Памятка по уходу за цветами</h3>
+              <p class="blog__item_text">
+                Подрезать стебли под углом, лучше всего острым секатором, но
+                если его нет, то острым ножом и резкими движениями, таким
+                образом чтобы срез был без заломов и сжатий, таким образом,
+                чтобы срез был без...
+              </p>
+              <a href="" class="blog__button">Далее</a>
+            </div>
+          </div>
+
+          <div class="blog__item">
+            <img src="images/blog-default.jpg" alt="" class="blog__img" />
+            <div class="blog__calendar">
+              <p class="blog__calendar_day">13</p>
+              <p class="blog__calendar_month">авг</p>
+            </div>
+            <div class="blog__text">
+              <h3 class="blog__inner_title">Памятка по уходу за цветами</h3>
+              <p class="blog__item_text">
+                Подрезать стебли под углом, лучше всего острым секатором, но
+                если его нет, то острым ножом и резкими движениями, таким
+                образом чтобы срез был без заломов и сжатий, таким образом,
+                чтобы срез был без...
+              </p>
+              <a href="" class="blog__button">Далее</a>
+            </div>
+          </div>
+        </div>
+        <a href="" class="blog__all link-beige"
+          >Читать все статьи <img src="images/studio-arrow.svg" alt=""
+        /></a>
+      </div>
+
+      <div class="container">
+        <div class="seo-text-container">
+          <h2 class="block-title">Seo-текст</h2>
+          <p class="seo-text">
+            Добро пожаловать в студию праздничного дизайна! Мы специализируемся
+            на создании неповторимой атмосферы для вашего особого события.
+            Независимо от того, свадьба, день рождения или корпоративное
+            мероприятие, наша команда профессионалов воплощает ваши мечты в
+            реальность. Мы создаем уникальные декорации, аранжировки и акценты,
+            чтобы каждая деталь события стала запоминающейся историей. Придайте
+            своему празднику волшебство с нами!"
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="contacts">
+              <div class="contacts__item">
+                <img src="images/icon-gps.png" alt="" />
+                <p class="contacts__text">
+                  г. Владикавказ, ул. Джанаева, д. 37
+                </p>
+              </div>
+              <div class="contacts__item">
+                <img src="images/email.png" alt="" />
+                <a
+                  class="contacts__text"
+                  href="mailto:ruki-design-studio@yandex.ru"
+                  >ruki-design-studio@yandex.ru</a
+                >
+              </div>
+              <div class="contacts__item">
+                <img src="images/phone.png" alt="" />
+                <p class="contacts__phone">+7(928)07-07-557</p>
+              </div>
+              <a href="" class="link-beige feedback-btn"
+                >Обратная связь <img src="images/studio-arrow.svg" alt=""
+              /></a>
+            </div>
+            <div class="menu">
+              <ul class="menu__column">
+                <li class="menu__item">О нас</li>
+                <li class="menu__item">Товары и услуги</li>
+                <li class="menu__item">Наши студии</li>
+              </ul>
+              <ul class="menu__column">
+                <li class="menu__item">Система скидок</li>
+                <li class="menu__item">Доставка</li>
+                <li class="menu__item">Контакты</li>
+              </ul>
+            </div>
+            <div class="network">
+              <p class="network__text">Мы в соцсетях и мессенджерах:</p>
+              <div class="network__icons">
+                <div class="icon"><img src="images/vk.png" alt="" /></div>
+                <div class="icon"><img src="images/telega.png" alt="" /></div>
+                <div class="icon"><img src="images/watsapp.png" alt="" /></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <a href="" class="footer__bottom_text"
+              >Политика конфиденциальности</a
+            >
+            <a href="" class="footer__bottom_text">Разработка сайта</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/lg-thumbnail.umd.js"></script>
+    <script src="js/lg-zoom.umd.js"></script>
+    <script src="js/lightgallery.umd.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script type="text/javascript">
+      lightGallery(document.getElementById("lightgallery"), {
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: "your_license_key",
+        speed: 500,
+        // ... other settings
+      });
+    </script>
+  </body>
+</html>

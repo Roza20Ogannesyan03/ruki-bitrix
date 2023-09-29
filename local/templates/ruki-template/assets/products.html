@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <img src="images/logo.svg" alt="" class="logo" />
+        <ul class="navigation">
+          <li class="navigatio__item">О нас</li>
+          <li class="navigatio__item">Товары и услуги</li>
+          <li class="navigatio__item">Наши студии</li>
+          <li class="navigatio__item">Система скидок</li>
+          <li class="navigatio__item">Доставка</li>
+          <li class="navigatio__item">Контакты</li>
+        </ul>
+        <a class="number" href="tel:+7(928)-07-07-557">+7(928)-07-07-557</a>
+
+        <div class="menu__burger-icon">
+          <div class="hamb__field" id="hamb">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+        <div class="popup" id="popup"></div>
+      </div>
+    </header>
+    <a href="#" class="icon scroll-arrow">
+      <img src="images/scroll-arrow.png" alt="" />
+    </a>
+
+    <div class="breadcrumbs-container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">Главная</li>
+        <li class="breadcrumbs__item">Товары и услуги</li>
+      </ul>
+      <h1 class="breadcrumbs__title">Товары и услуги</h1>
+    </div>
+    <div class="container">
+      <div class="products">
+        <div class="swiper" id="product1">
+          <div class="swiper-wrapper product__wrapper">
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-1.jpg" alt="" />
+            </div>
+          </div>
+          <h4 class="bouquet__title">Авторский букет в нежной гамме</h4>
+          <p class="bouquet__subtitle">
+            Нежно-розовые пионы, светло-голубая лаванда и белых альстромерий,
+            дополненных нежно-желтыми акцентами
+          </p>
+          <div class="swiper-pagination product__bullet"></div>
+          <div class="arrows product__arrows">
+            <div class="product1__swiper-button-prev">
+              <img src="images/prev.svg" alt="" />
+            </div>
+            <div class="product1__swiper-button-next">
+              <img src="images/next.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper" id="product2">
+          <div class="swiper-wrapper product__wrapper">
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-2.jpg" alt="" />
+              <h4 class="bouquet__title">Летний букет в нежной гамме</h4>
+              <p class="bouquet__subtitle">
+                Светло-желтые ромашки, лавандовые лиловцы и нежно-зеленые
+                веточки зверобоя.
+              </p>
+            </div>
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-2.jpg" alt="" />
+              <h4 class="bouquet__title">Летний букет в нежной гамме</h4>
+              <p class="bouquet__subtitle">
+                Светло-желтые ромашки, лавандовые лиловцы и нежно-зеленые
+                веточки зверобоя.
+              </p>
+            </div>
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-2.jpg" alt="" />
+              <h4 class="bouquet__title">Летний букет в нежной гамме</h4>
+              <p class="bouquet__subtitle">
+                Светло-желтые ромашки, лавандовые лиловцы и нежно-зеленые
+                веточки зверобоя.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination product__bullet"></div>
+          <div class="arrows product__arrows">
+            <div class="product2__swiper-button-prev">
+              <img src="images/prev.svg" alt="" />
+            </div>
+            <div class="product2__swiper-button-next">
+              <img src="images/next.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper" id="product3">
+          <div class="swiper-wrapper product__wrapper">
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-3.jpg" alt="" />
+              <h4 class="bouquet__title">Розовая гармония с зеленью</h4>
+              <p class="bouquet__subtitle">
+                Этот букет сочетает в себе изысканную розу и живую гвоздику,
+                обрамленные свежими зелеными листьями
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination product__bullet"></div>
+          <div class="arrows product__arrows">
+            <div class="product3__swiper-button-prev">
+              <img src="images/prev.svg" alt="" />
+            </div>
+            <div class="product3__swiper-button-next">
+              <img src="images/next.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper" id="product4">
+          <div class="swiper-wrapper product__wrapper">
+            <div class="swiper-slide bouquet__slide">
+              <img class="bouquet__img" src="images/bouquet-4.jpg" alt="" />
+              <h4 class="bouquet__title">Нежный авторский букет</h4>
+              <p class="bouquet__subtitle">
+                Нежно-розовые пионы, светло-голубая лаванда и белых
+                альстромерий, дополненных акцентами хризантем
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination product__bullet"></div>
+          <div class="arrows product__arrows">
+            <div class="product4__swiper-button-prev">
+              <img src="images/prev.svg" alt="" />
+            </div>
+            <div class="product4__swiper-button-next">
+              <img src="images/next.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <ul class="page-navi">
+          <li class="page-navi__item">
+            <img src="images/page-navi-left.svg" alt="" />
+          </li>
+          <li class="page-navi__item">1</li>
+          <li class="page-navi__item">2</li>
+          <li class="page-navi__item">3</li>
+          <li class="page-navi__item">4</li>
+          <li class="page-navi__item page-navi__item_active">5</li>
+          <li class="page-navi__item">6</li>
+          <li class="page-navi__item">
+            <img src="images/page-navi-right.svg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="promotion promotion-products">
+      <div class="promotion__content">
+        <h2 class="block-title">Специальное предложение!</h2>
+
+        <div class="promotion__bottom">
+          <div class="promotion-products__img_cont_wrap">
+            <div class="promotion-products__img_cont">
+              <img
+                class="promotion-products__img"
+                src="images/promotion-products.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="promotion__text_cont">
+            <p class="promotion__text">
+              От сети магазинов “Упаковочные материалы”
+            </p>
+            <a href="" class="link-beige link-green"
+              >Перейти на сайт
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_323_5)">
+                  <path
+                    d="M3.1622 2.05026L3.1622 3.78267L8.97815 3.78267L1.42979 11.331L2.66722 12.5685L10.2156 5.0201L10.2156 10.8361L11.948 10.8361L11.948 2.05026L3.1622 2.05026Z"
+                    fill="#95A452"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_323_5">
+                    <rect
+                      width="14"
+                      height="14"
+                      fill="white"
+                      transform="translate(0 14) rotate(-90)"
+                    />
+                  </clipPath>
+                </defs></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="seo-text-container">
+        <h2 class="block-title">Seo-текст</h2>
+        <p class="seo-text">
+          Добро пожаловать в студию праздничного дизайна! Мы специализируемся на
+          создании неповторимой атмосферы для вашего особого события. Независимо
+          от того, свадьба, день рождения или корпоративное мероприятие, наша
+          команда профессионалов воплощает ваши мечты в реальность. Мы создаем
+          уникальные декорации, аранжировки и акценты, чтобы каждая деталь
+          события стала запоминающейся историей. Придайте своему празднику
+          волшебство с нами!"
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="contacts">
+            <div class="contacts__item">
+              <img src="images/icon-gps.png" alt="" />
+              <p class="contacts__text">г. Владикавказ, ул. Джанаева, д. 37</p>
+            </div>
+            <div class="contacts__item">
+              <img src="images/email.png" alt="" />
+              <a
+                class="contacts__text"
+                href="mailto:ruki-design-studio@yandex.ru"
+                >ruki-design-studio@yandex.ru</a
+              >
+            </div>
+            <div class="contacts__item">
+              <img src="images/phone.png" alt="" />
+              <p class="contacts__phone">+7(928)07-07-557</p>
+            </div>
+            <a href="" class="link-beige feedback-btn"
+              >Обратная связь <img src="images/studio-arrow.svg" alt=""
+            /></a>
+          </div>
+          <div class="menu">
+            <ul class="menu__column">
+              <li class="menu__item">О нас</li>
+              <li class="menu__item">Товары и услуги</li>
+              <li class="menu__item">Наши студии</li>
+            </ul>
+            <ul class="menu__column">
+              <li class="menu__item">Система скидок</li>
+              <li class="menu__item">Доставка</li>
+              <li class="menu__item">Контакты</li>
+            </ul>
+          </div>
+          <div class="network">
+            <p class="network__text">Мы в соцсетях и мессенджерах:</p>
+            <div class="network__icons">
+              <div class="icon"><img src="images/vk.png" alt="" /></div>
+              <div class="icon"><img src="images/telega.png" alt="" /></div>
+              <div class="icon"><img src="images/watsapp.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="" class="footer__bottom_text">Политика конфиденциальности</a>
+          <a href="" class="footer__bottom_text">Разработка сайта</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sliders.js"></script>
+  </body>
+</html>
