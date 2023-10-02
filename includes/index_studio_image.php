@@ -1,0 +1,1 @@
+<img src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/studio.jpg" alt="" class="studio__img">

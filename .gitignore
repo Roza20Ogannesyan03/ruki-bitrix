@@ -3,4 +3,11 @@
 !/ajax/
 !/local/
 !/include/
+!/includes/
+!/o-nas/
+!/dostavka/
+!/products/
+!/blog/
+!/studio/
+!/contacts/
 !/.gitignore
