@@ -10,4 +10,8 @@
 !/blog/
 !/studio/
 !/contacts/
+!.bottom.menu.php
+!.bottom2.menu.php
+!.top.menu.php
+!404.php
 !/.gitignore
