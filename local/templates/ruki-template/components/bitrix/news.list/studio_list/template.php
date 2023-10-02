@@ -18,19 +18,14 @@ $this->setFrameMode(true);
 		<?php foreach ($arResult["ITEMS"] as $arItem) :
 		?>
 
-			<div class="studio__item">
+			<div class="studio__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 				<div class="studio__img_container">
 
 					<div class="studio__item_images" id="lightgallery">
-						<!-- 
-						<div class="studio__images_left">
-							<a href="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>">
-								<img src="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>" alt="" class="studio__images_left1" />
-							</a>
-						</div> -->
+
 						<?php foreach ($arItem["PROPERTIES"]['studio_images']['VALUE'] as $imgId) : ?>
 							<a href="<?= CFile::GetPath($imgId); ?>">
-								<img src="<?= CFile::GetPath($imgId); ?>" alt="" class="studio__images_right2" />
+								<img src="<?= CFile::GetPath($imgId); ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" class="studio__images_right2" />
 
 							</a>
 						<? endforeach;

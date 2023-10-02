@@ -12,6 +12,14 @@ use Bitrix\Main\UI\Extension;
 
 ?>
 
+<div class="cookie" style="display: none;">
+	<p class="cookie__text">
+		Используя сайт сети магазинов «Руки», я даю согласие на обработку моих персональных данных с использованием сторонних сервисов и принимаю условия Политики Конфиденциальности
+	</p>
+	<div class="link-beige link-white cookie_btn">
+		Хорошо
+	</div>
+</div>
 
 <footer class="footer">
 	<div class="container">
@@ -124,6 +132,7 @@ use Bitrix\Main\UI\Extension;
 <script>
 	window.addEventListener("load", () => {
 		const form = document.getElementById("form_feedback");
+		let mess = document.querySelector(".response");
 
 		let isLoading = false;
 
@@ -153,12 +162,36 @@ use Bitrix\Main\UI\Extension;
 								Accept: "text/html",
 							},
 						});
-
-						console.log(await response.json());
-
 						isLoading = false;
 					});
 			});
+
+			let err = "";
+
+			let inputs = document.querySelectorAll('input, textarea');
+			inputs.forEach(el => {
+				if (el.value == "") {
+					err = "Заполните все поля"
+					el.classList.add('empty')
+				}
+				console.log(el.value);
+			})
+
+			if (err !== "Заполните все поля") {
+				console.log(err)
+				inputs.forEach(el => {
+					el.value = ""
+				})
+				mess.innerHTML = "Ваше сообщение успешно отправлено!";
+			} else {
+				inputs.forEach(el => {
+					mess.innerHTML = err
+					if (el.classList.contains("empty")) {
+						el.style.borderColor = "#da4c4c";
+					}
+				})
+				mess.style.backgroundColor = "#cfb595"
+			}
 		});
 	});
 </script>

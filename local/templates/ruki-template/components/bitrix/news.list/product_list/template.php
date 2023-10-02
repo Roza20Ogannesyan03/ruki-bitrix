@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 					<div class="swiper-wrapper product__wrapper">
 						<?php foreach ($arItem["PROPERTIES"]['bouquets_images']['VALUE'] as $imgId) : ?>
 
-							<div class="swiper-slide bouquet__slide">
+							<div class="swiper-slide bouquet__slide" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 								<img class="bouquet__img" src="<?= CFile::GetPath($imgId); ?>" />
 							</div>
 

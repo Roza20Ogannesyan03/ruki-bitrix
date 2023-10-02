@@ -55,6 +55,9 @@ a {
 p {
   margin: 0px;
 }
+li b {
+  font-weight: 700;
+}
 
 button {
   background-color: transparent;
@@ -194,6 +197,12 @@ label {
 .response {
   position: relative;
   z-index: 2;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+
+  color: #fff;
+  padding: 15px;
 }
 .success {
   margin-top: 30px;
@@ -656,6 +665,19 @@ label {
 
 .seo-text-container {
   margin: 100px 0;
+}
+
+.seo-text-container .block-title div {
+  font-family: "Playfair Display-Regular";
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+}
+.studio__text-wrapper .block-title div {
+  font-family: "Playfair Display-Regular";
+  font-size: 40px;
+  line-height: 53px;
+  text-align: left;
 }
 
 .seo-text {
@@ -1647,6 +1669,7 @@ h3 .studio__item_title {
   text-align: center;
   margin: 100px auto 40px;
   text-align: center;
+  margin-right: 270px;
 }
 .static_content ul {
   max-width: 1095px;
@@ -1676,4 +1699,22 @@ h3 .studio__item_title {
 .static__list_item-text {
   font-family: "Montserrat";
   line-height: 40px;
+}
+
+@media (max-width: 1370px) {
+  .static_content h3 {
+    margin-right: unset;
+    margin: 100px auto 40px;
+  }
+}
+@media (max-width: 1370px) {
+  .static_content h2 {
+    margin-right: unset;
+    margin: 60px auto 40px;
+  }
+}
+@media (max-width: 1370px) {
+  .static_content h2 {
+    margin: 40px auto;
+  }
 }

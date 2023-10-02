@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 				<?php foreach ($arResult["ITEMS"] as $arItem) : ?>
 
 					<!--if (!empty($arResult['PREVIEW_PICTURE']['SRC'])) : -->
-					<div class="swiper-slide image-overlay" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>')">
+					<div class="swiper-slide image-overlay" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>')" id=" <?= $this->GetEditAreaId($arItem['ID']); ?>">
 						<div class="container">
 							<div class="slide__text">
 								<span class="line"></span>

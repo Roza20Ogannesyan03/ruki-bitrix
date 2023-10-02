@@ -20,8 +20,8 @@ $this->setFrameMode(true);
         <h2 class="block-title">Почему выбирают нас?</h2>
         <?php foreach ($arResult["ITEMS"] as $arItem) : ?>
 
-            <div class="choice__content_item">
-                <img src="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>" alt="" />
+            <div class="choice__content_item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <img src="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?> " alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" />
                 <div class="item__text">
                     <p class="choice__title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></p>
                     <p class="choice__subtitle">

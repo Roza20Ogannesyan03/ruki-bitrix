@@ -82,11 +82,11 @@ use Bitrix\Main\Page\Asset;
 					<input class="inputs" type="text" name="name" id="name" placeholder="Введите имя" />
 
 					<label for="email">Ваш e-mail</label>
-					<input class="inputs" type="email" name="email" id="email" placeholder="Введите e-mail" />
+					<input class="inputs" type="email" name="email" id="email" placeholder="Введите e-mail" title="xxx@xxx.xxx" />
 					<p class="hint">Мы отправим ответ на обращение по данному адресу</p>
 
 					<label for="number">Ваш телефон</label>
-					<input class="inputs" type="tel" name="number" id="number" placeholder="Введите телефон" />
+					<input class="inputs" type="tel" name="number" id="number" placeholder="Введите телефон" title="+7 (___) ___-__-__" />
 					<p class="hint">
 						В случае необходимости, мы свяжемся с Вами по этому номеру
 					</p>
@@ -105,8 +105,20 @@ use Bitrix\Main\Page\Asset;
 					</div>
 
 					<div class="response"></div>
+
 				</form>
 			</div>
 		</div>
 
 	</header>
+	<a href="#" class="icon scroll-arrow">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g clip-path="url(#clip0_186_1621)">
+				<path d="M9.49756 6.02673L1.0413 13.8773C0.764407 14.1345 0.764873 14.551 1.04274 14.8077C1.32056 15.0643 1.77062 15.0637 2.04774 14.8064L10.0007 7.42313L17.9536 14.8067C18.2307 15.0639 18.6805 15.0646 18.9584 14.808C19.0977 14.6793 19.1673 14.5106 19.1673 14.342C19.1673 14.1738 19.0981 14.0058 18.9598 13.8773L10.5038 6.02673C10.3706 5.90285 10.1895 5.83333 10.0007 5.83333C9.81191 5.83333 9.63094 5.90305 9.49756 6.02673Z" fill="#CAB090" />
+			</g>
+			<defs>
+				<clipPath id="clip0_186_1621">
+					<rect width="20" height="20" fill="white" transform="translate(0 20) rotate(-90)" />
+				</clipPath>
+			</defs>
+		</svg></a>

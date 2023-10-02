@@ -26,8 +26,8 @@ $this->setFrameMode(true);
                     <?php foreach ($arResult["ITEMS"] as $arItem) :
 
                     ?>
-                        <a href="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>" class="swiper-slide bouquet__slide" data-sub-html="Авторский букет в нежной гамме">
-                            <img class="bouquet__img" src="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>" alt="" />
+                        <a href="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>" class="swiper-slide bouquet__slide" data-sub-html="<?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?>" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                            <img class="bouquet__img" src="<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" />
                             <h4 class="bouquet__title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h4>
                             <p class="bouquet__subtitle">
                                 <?= $arItem['PREVIEW_TEXT']; ?>

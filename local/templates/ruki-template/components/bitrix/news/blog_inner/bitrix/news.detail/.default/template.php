@@ -23,18 +23,21 @@ $this->setFrameMode(true);
 	<div class="static_content">
 		<?php echo $arResult['DETAIL_TEXT'] ?>
 	</div>
-
-
 	<div class="seo-text-container">
-		<h2 class="block-title">Seo-текст</h2>
+
+		<h2 class="block-title">
+			<?php
+			$APPLICATION->IncludeFile('/includes/index_seo_title.php', array(), array('MODE' => 'html'));
+
+			?>
+
+		</h2>
+
 		<p class="seo-text">
-			Добро пожаловать в студию праздничного дизайна! Мы специализируемся на
-			создании неповторимой атмосферы для вашего особого события. Независимо
-			от того, свадьба, день рождения или корпоративное мероприятие, наша
-			команда профессионалов воплощает ваши мечты в реальность. Мы создаем
-			уникальные декорации, аранжировки и акценты, чтобы каждая деталь
-			события стала запоминающейся историей. Придайте своему празднику
-			волшебство с нами!"
+			<?php
+			$APPLICATION->IncludeFile('/includes/index_seo_text.php', array(), array('MODE' => 'html'));
+
+			?>
 		</p>
 	</div>
 </div>
