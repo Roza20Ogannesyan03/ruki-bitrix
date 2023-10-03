@@ -20,7 +20,7 @@ $this->setFrameMode(true);
         <div class="container">
             <div class="swiper" id="bouquet">
                 <!-- Additional required wrapper -->
-                <h2 class="block-title">Выбор покупателя</h2>
+                <div class="block-title">Выбор покупателя</div>
                 <div class="swiper-wrapper bouquet__wrapper" id="lightgallery__bouquets">
                     <!-- Slides -->
                     <?php foreach ($arResult["ITEMS"] as $arItem) :

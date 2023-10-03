@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 
 
     <div class="choice">
-        <h2 class="block-title">Почему выбирают нас?</h2>
+        <div class="block-title">Почему выбирают нас?</div>
         <?php foreach ($arResult["ITEMS"] as $arItem) : ?>
 
             <div class="choice__content_item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">

@@ -18,16 +18,17 @@ $this->setFrameMode(true);
 
 <?php if (!empty($arResult['ITEMS'])) : ?>
 	<?php foreach ($arResult["ITEMS"] as $arItem) :
+		$img = CFile::GetPath($arItem['PROPERTIES']['skidka']['VALUE']);
 	?>
 
-		<div class="promotion" id="<?= $this->GetEditAreaId($arItem['ID']); ?>" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC'];  ?>');" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>">
+		<div class="promotion" id="<?= $this->GetEditAreaId($arItem['ID']); ?>" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC'];  ?>');" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>">
 
 
 			<div class="promotion__content">
-				<h2 class="block-title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h2>
+				<div class="block-title"><?= isset($arItem["PROPERTIES"]['offer']['VALUE']) ? $arItem["PROPERTIES"]['offer']['VALUE']  : ''; ?></div>
 
 				<div class="promotion__bottom">
-					<img class="img-20" src="<?= CFile::GetPath($arItem['PROPERTIES']['skidka']['VALUE']); ?>" alt="" />
+					<img class="img-20" src="<?= isset($img) ? $img : ''; ?>" onerror="this.style.display='none'" />
 					<p class="promotion__text">
 						<?= $arItem['PREVIEW_TEXT']; ?>
 					</p>

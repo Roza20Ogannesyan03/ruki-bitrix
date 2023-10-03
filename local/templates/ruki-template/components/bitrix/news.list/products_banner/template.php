@@ -22,7 +22,7 @@ $this->setFrameMode(true);
 
 		<div class="promotion promotion-products" id="<?= $this->GetEditAreaId($arItem['ID']); ?>" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC'];  ?>');" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>">
 			<div class="promotion__content">
-				<h2 class="block-title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h2>
+				<h2 class="block-title"><?= $arItem["PROPERTIES"]['offer_products']['VALUE']; ?></h2>
 				<div class="promotion__bottom">
 					<div class="promotion-products__img_cont_wrap">
 						<div class="promotion-products__img_cont">

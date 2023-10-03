@@ -22,14 +22,7 @@ var swiper2 = new Swiper(document.getElementById("bouquet"), {
   slidesPerGroup: 1,
   loopFillGroupWithBlank: true,
   speed: 1000,
-  loop: true,
-  spaceBetween: 0,
-  breakpoints: {
-    // when window width is >= 320px
-    700: {
-      spaceBetween: 30,
-    },
-  },
+  spaceBetween: 30,
 });
 
 document.querySelectorAll('.swiper-product').forEach((element) => {

@@ -3,15 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 ?>
 
-<? $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb",
-	"breadcrumb",
-	array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0"
-	)
-); ?><br>
+
 <? $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"product_list",
@@ -90,7 +82,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
 				"DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
 				"DISPLAY_DATE" => "N",	// Выводить дату элемента
-				"DISPLAY_NAME" => "Y",	// Выводить название элемента
+				"DISPLAY_NAME" => "N",	// Выводить название элемента
 				"DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
 				"DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
 				"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
@@ -143,13 +135,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 <div class="container">
 	<div class="seo-text-container">
 
-		<h2 class="block-title">
+		<h1 class="block-title">
 			<?php
 			$APPLICATION->IncludeFile('/includes/index_seo_title.php', array(), array('MODE' => 'html'));
 
 			?>
 
-		</h2>
+		</h1>
 
 		<p class="seo-text">
 			<?php

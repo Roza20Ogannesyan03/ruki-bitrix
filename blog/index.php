@@ -4,15 +4,6 @@ $APPLICATION->SetTitle("Блог");
 ?>
 
 <? $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb",
-	"breadcrumb",
-	array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0"
-	)
-); ?><br>
-<? $APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"blog_inner",
 	array(

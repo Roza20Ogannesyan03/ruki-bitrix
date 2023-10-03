@@ -6,16 +6,6 @@ $APPLICATION->AddChainItem('Наши студии', '/studio/');
 ?>
 
 
-<? $APPLICATION->IncludeComponent(
-    "bitrix:breadcrumb",
-    "breadcrumb",
-    array(
-        "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-        "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-        "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
-    ),
-    false
-); ?><br>
 <div class="container-small">
     <? $APPLICATION->IncludeComponent(
         "bitrix:news.list",

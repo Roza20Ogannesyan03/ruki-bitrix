@@ -17,27 +17,4 @@ $this->setFrameMode(true);
 
 ?>
 
-
-<div class="container">
-
-	<div class="static_content">
 		<?php echo $arResult['DETAIL_TEXT'] ?>
-	</div>
-	<div class="seo-text-container">
-
-		<h2 class="block-title">
-			<?php
-			$APPLICATION->IncludeFile('/includes/index_seo_title.php', array(), array('MODE' => 'html'));
-
-			?>
-
-		</h2>
-
-		<p class="seo-text">
-			<?php
-			$APPLICATION->IncludeFile('/includes/index_seo_text.php', array(), array('MODE' => 'html'));
-
-			?>
-		</p>
-	</div>
-</div>

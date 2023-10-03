@@ -11,7 +11,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				Мы не можем найти запрашиваемую вами страницу, ошибка
 			</h3>
 			<p class="num__404">404</p>
-			<a href="" class="button__404">Вернуться на главную страницу</a>
+			<a href="/" class="button__404">Вернуться на главную страницу</a>
 		</div>
 	</div>
 </div>
