@@ -100,7 +100,7 @@ use Bitrix\Main\Page\Asset;
 
 		<? endif; ?>
 
-		<? if ($APPLICATION->GetCurPage(false) !== '/' && !CSite::InDir('/products/') && !CSite::InDir('/studio/')) : ?>
+		<? if ($APPLICATION->GetCurPage(false) !== '/' && !CSite::InDir('/products/') && !CSite::InDir('/studio/') && !CSite::InDir('/blog/')) : ?>
 
 			<div class="container main-text_block">
 			<? endif; ?>

@@ -47,24 +47,26 @@ $month = date('n') - 1;
 
 				<div class="blog__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 					<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><img src="<?= isset($arItem['PREVIEW_PICTURE']['SRC']) ? $arItem['PREVIEW_PICTURE']['SRC'] :  SITE_TEMPLATE_PATH . "/assets/images/blog-default.jpg"; ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" class="blog__img" /></a>
-					<p class="blog__calendar_day"><?= date('d'); ?></p>
-					<p class="blog__calendar_month"><?= $arr[$month]; ?></p>
+					<div class="blog__calendar">
+						<p class="blog__calendar_day"><?= date('d'); ?></p>
+						<p class="blog__calendar_month"><?= $arr[$month]; ?></p>
+					</div>
+					<div class="blog__text">
+						<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
+							<h3 class="blog__inner_title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h3>
+						</a>
+						<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
+							<p class="blog__item_text">
+								<?= $arItem['PREVIEW_TEXT']; ?>
+							</p>
+						</a>
+						<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="blog__button">Далее</a>
+					</div>
 				</div>
-				<div class="blog__text">
-					<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
-						<h3 class="blog__inner_title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h3>
-					</a>
-					<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
-						<p class="blog__item_text">
-							<?= $arItem['PREVIEW_TEXT']; ?>
-						</p>
-					</a>
-					<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="blog__button">Далее</a>
-				</div>
-		</div>
-	<? endforeach; ?>
 
-	</div>
+			<? endforeach; ?>
+
+		</div>
 
 	</div>
 
