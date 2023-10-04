@@ -46,7 +46,9 @@ html {
 ul {
   padding: 0;
 }
-
+b {
+  font-weight: 700;
+}
 li {
   list-style: none;
 }
@@ -98,8 +100,8 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(247, 247, 247, 0.4);
-  z-index: 10;
+  background-color: rgba(247, 247, 247, 0.6);
+  z-index: 70;
 }
 .modal-content {
   display: block;
@@ -230,10 +232,9 @@ label {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(247, 247, 247, 0.4);
   top: 20px;
   left: 0;
-  z-index: 200;
+  z-index: 1200;
   -webkit-animation: fade 0.25s ease;
   animation: fade 0.25s ease;
 }
@@ -359,7 +360,7 @@ label {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(247, 247, 247, 0.4);
+  background-color: rgba(247, 247, 247, 0.5);
   z-index: 1;
 }
 .slide__text {
@@ -1259,7 +1260,6 @@ label {
 .page-404 {
   height: 604px;
   background-position: center;
-  margin-top: 97px;
 }
 .page-404::after {
   background-color: rgba(247, 247, 247, 0.8);
@@ -1436,13 +1436,17 @@ label {
   width: 100px;
   height: 100px;
 }
+.studio__item_images-link {
+  position: relative;
+}
 
 .studio__search_container {
   position: absolute;
-  right: 12px;
-  bottom: 12px;
-  width: 76px;
-  height: 76px;
+  width: 76%;
+  height: 76%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   background-color: #cfb595;
   display: flex;
@@ -1450,8 +1454,12 @@ label {
   align-items: center;
   z-index: 5;
 }
+.studio__img_search {
+  width: auto !important;
+  height: auto !important;
+}
 
-.studio__img_container:hover .studio__search_container {
+.studio__item_images-link:hover .studio__search_container {
   opacity: 0.8;
   transition: opacity 0.3s ease-out;
 }
@@ -1590,26 +1598,6 @@ h3 .studio__item_title {
   background-image: url("../images/photo-promotion.png");
   background-size: cover;
   margin-top: 100px;
-}
-.promotion-products__img_cont_wrap {
-  width: 260px;
-  height: 202px;
-  border: 1px solid #fff;
-  padding: 16px;
-  margin: 25px 32px 0 0;
-}
-
-.promotion-products__img_cont {
-  width: 228px;
-  height: 169px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-}
-.promotion-products__img {
-  position: relative;
-  z-index: 5;
 }
 .promotion-products .block-title {
   text-align: left;

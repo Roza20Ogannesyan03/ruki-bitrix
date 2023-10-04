@@ -26,10 +26,11 @@ $this->setFrameMode(true);
 							<div class="slide__text">
 								<span class="line"></span>
 								<div class="slide__text_title">
-									<?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?>
+									<?= $arItem['PREVIEW_TEXT']; ?>
+
 								</div>
 								<p class="slide__text_subtitle">
-									<?= $arItem['PREVIEW_TEXT']; ?>
+									<?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?>
 								</p>
 							</div>
 						</div>

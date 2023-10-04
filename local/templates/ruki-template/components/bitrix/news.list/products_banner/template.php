@@ -22,13 +22,14 @@ $this->setFrameMode(true);
 
 		<div class="promotion promotion-products" id="<?= $this->GetEditAreaId($arItem['ID']); ?>" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC'];  ?>');" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>">
 			<div class="promotion__content">
-				<h2 class="block-title"><?= $arItem["PROPERTIES"]['offer_products']['VALUE']; ?></h2>
+				<h2 class="block-title"><?= isset($arItem["PROPERTIES"]['offer_products']['VALUE']) ? $arItem["PROPERTIES"]['offer_products']['VALUE']  : ''; ?></h2>
 				<div class="promotion__bottom">
-					<div class="promotion-products__img_cont_wrap">
-						<div class="promotion-products__img_cont">
-							<img class="promotion-products__img" src="<?= CFile::GetPath($arItem['PROPERTIES']['products_skidka']['VALUE']); ?>" alt="" />
-						</div>
+
+					<div class="promotion__bottom">
+						<img class="img-20" src="<?= CFile::GetPath($arItem['PROPERTIES']['products_skidka']['VALUE']); ?>" alt="" onerror="this.style.display='none'" />
+
 					</div>
+
 					<div class="promotion__text_cont">
 						<p class="promotion__text">
 							<?= $arItem['PREVIEW_TEXT']; ?>

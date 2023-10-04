@@ -24,16 +24,16 @@ $this->setFrameMode(true);
 					<div class="studio__item_images" id="lightgallery">
 
 						<?php foreach ($arItem["PROPERTIES"]['studio_images']['VALUE'] as $imgId) : ?>
-							<a href="<?= CFile::GetPath($imgId); ?>">
+							<a href="<?= CFile::GetPath($imgId); ?>" class="studio__item_images-link">
 								<img src="<?= CFile::GetPath($imgId); ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" class="studio__images_right2" />
-
+								<div class="studio__search_container">
+									<img class="studio__img_search" src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/search.svg" alt="" />
+								</div>
 							</a>
 						<? endforeach;
 						?>
 					</div>
-					<div class="studio__search_container">
-						<img class="studio__img_search" src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/search.svg" alt="" />
-					</div>
+
 				</div>
 				<div class="studio__item_content">
 					<h3 class="studio__item_title"><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h3>

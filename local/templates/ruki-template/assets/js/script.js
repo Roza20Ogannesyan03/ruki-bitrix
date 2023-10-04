@@ -65,18 +65,19 @@ if (cook) {
   }
 }
 
-
-
-
 const rez = document.querySelector('.modal');
+const black = document.querySelector('.PermalinkOverlay');
 document.querySelector('.feedback-btn').addEventListener('click', function () {
   rez.style.display = 'block';
+  black.classList.add('black');
+
 });
 
 
 const close = document.querySelector(".close__img");
 close.addEventListener('click', function () {
   rez.style.display = 'none';
+  black.classList.remove('black');
 });
 
 
