@@ -272,6 +272,9 @@ label {
   z-index: 30;
   padding: 0 15px;
 }
+.cookie .polit__link {
+  color: #fff;
+}
 .cookie__text {
   font-family: "Montserrat";
   font-size: 14px;
