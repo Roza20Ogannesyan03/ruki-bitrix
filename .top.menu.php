@@ -23,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Система скидок", 
-		"sale/", 
+		"sistema-skidok/", 
 		Array(), 
 		Array(), 
 		"" 

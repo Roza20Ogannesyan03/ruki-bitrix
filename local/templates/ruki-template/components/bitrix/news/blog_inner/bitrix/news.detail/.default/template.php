@@ -16,5 +16,7 @@ $this->setFrameMode(true);
 // echo '</pre>';
 
 ?>
+<div class="container main-text_block">
 
-		<?php echo $arResult['DETAIL_TEXT'] ?>
+	<?php echo $arResult['DETAIL_TEXT'] ?>
+</div>

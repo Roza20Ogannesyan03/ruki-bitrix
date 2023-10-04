@@ -1,24 +1,25 @@
 <?
-$aMenuLinks = array(
-	array(
-		"Система скидок",
-		"/skidki.php",
-		array(),
-		array(),
-		""
+$aMenuLinks = Array(
+	Array(
+		"Система скидок", 
+		"/sistema-skidok", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Доставка",
-		"/dostavka/",
-		array(),
-		array(),
-		""
+	Array(
+		"Доставка", 
+		"/dostavka/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Контакты",
-		"contacts/",
-		array(),
-		array(),
-		""
+	Array(
+		"Контакты", 
+		"contacts/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
+?>
