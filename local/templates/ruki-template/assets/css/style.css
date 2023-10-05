@@ -1502,6 +1502,9 @@ h3 .studio__item_title {
   height: 493px;
   margin-bottom: 100px;
 }
+.contacts_map {
+  margin-bottom: 0;
+}
 .map {
   margin-top: 40px;
   width: 100%;
