@@ -16,8 +16,8 @@ use Bitrix\Main\UI\Extension;
 
 <? if (CSite::InDir('/contacts/')) : ?>
 
-	<div class="locations">
-		<div class="map contacts_map" id="map"></div>
+	<div class="locations contacts_map">
+		<div class="map " id="map"></div>
 	</div>
 
 	<script src="https://api-maps.yandex.ru/2.0-stable/?apikey=ваш API-ключ&?apikey=ваш API-ключ&load=package.standard&lang=ru-RU"></script>
