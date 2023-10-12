@@ -227,19 +227,19 @@ use Bitrix\Main\UI\Extension;
 		</p>
 		<form id="form_feedback" action="/ajax/form.php" method="post" class="modal__form" enctype="multipart/form-data">
 			<label for="name">Ваше имя</label>
-			<input class="inputs" type="text" name="name" id="name" placeholder="Введите имя" />
+			<input class="inputs" type="text" name="name" id="name" placeholder="Введите имя" required />
 
 			<label for="email">Ваш e-mail</label>
-			<input class="inputs" type="email" name="email" id="email" placeholder="Введите e-mail" title="xxx@xxx.xxx" />
+			<input class="inputs" type="email" name="email" id="email" placeholder="Введите e-mail" title="xxx@xxx.xxx" required />
 			<p class="hint">Мы отправим ответ на обращение по данному адресу</p>
 
 			<label for="number">Ваш телефон</label>
-			<input class="inputs" type="tel" name="number" id="number" placeholder="Введите телефон" title="+7 (___) ___-__-__" />
+			<input class="inputs" type="tel" name="number" id="number" placeholder="Введите телефон" title="+7 (___) ___-__-__" required />
 			<p class="hint">
 				В случае необходимости, мы свяжемся с Вами по этому номеру
 			</p>
 			<label for="message">Текст сообщения</label>
-			<textarea class="inputs message" name="message" id="message" placeholder="Введите сообщение..."></textarea>
+			<textarea class="inputs message" name="message" id="message" placeholder="Введите сообщение..." required></textarea>
 
 
 
