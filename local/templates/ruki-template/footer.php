@@ -420,32 +420,33 @@ use Bitrix\Main\UI\Extension;
 					});
 			});
 
-			let err = "";
+			// let err = "";
 
-			let inputs = document.querySelectorAll('input, textarea');
-			inputs.forEach(el => {
-				if (el.value == "") {
-					err = "Заполните все поля"
-					el.classList.add('empty')
-				}
-				console.log(el.value);
-			})
+			// let inputs = document.querySelectorAll('input, textarea');
+			// inputs.forEach(el => {
+			// 	if (el.value == "") {
+			// 		err = "Заполните все поля"
+			// 		el.classList.add('empty')
+			// 	}
+			// 	console.log(el.value);
+			// })
 
-			if (err !== "Заполните все поля") {
-				console.log(err)
-				inputs.forEach(el => {
-					el.value = ""
-				})
-				mess.innerHTML = "Ваше сообщение успешно отправлено!";
-			} else {
-				inputs.forEach(el => {
-					mess.innerHTML = err
-					if (el.classList.contains("empty")) {
-						el.style.borderColor = "#da4c4c";
-					}
-				})
-				mess.style.backgroundColor = "#cfb595"
-			}
+			// if (err !== "Заполните все поля") {
+			// 	console.log(err)
+			// 	inputs.forEach(el => {
+			// 		el.value = ""
+			// 	})
+			// 	mess.innerHTML = "Ваше сообщение успешно отправлено!";
+			// } else {
+			// 	inputs.forEach(el => {
+			// 		mess.innerHTML = err
+			// 		if (el.classList.contains("empty")) {
+			// 			el.style.borderColor = "#da4c4c";
+			// 		}
+			// 	})
+			// 	mess.style.backgroundColor = "#cfb595"
+			// }
+			mess.innerHTML = "Ваше сообщение успешно отправлено!";
 		});
 	});
 </script>
