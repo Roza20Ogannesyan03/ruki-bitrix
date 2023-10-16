@@ -420,7 +420,7 @@ use Bitrix\Main\UI\Extension;
 
 			// let err = "";
 
-			// let inputs = document.querySelectorAll('input, textarea');
+			let inputs = document.querySelectorAll('input, textarea');
 			// inputs.forEach(el => {
 			// 	if (el.value == "") {
 			// 		err = "Заполните все поля"
@@ -444,6 +444,9 @@ use Bitrix\Main\UI\Extension;
 			// 	})
 			// 
 			// }
+			inputs.forEach(el => {
+				el.value = ""
+			})
 			mess.style.backgroundColor = "#cfb595"
 			mess.innerHTML = "Ваше сообщение успешно отправлено!";
 		});
