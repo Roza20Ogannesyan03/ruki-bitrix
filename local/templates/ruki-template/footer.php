@@ -380,14 +380,12 @@ use Bitrix\Main\UI\Extension;
 <script src="<?php echo  SITE_TEMPLATE_PATH ?>/assets/js/lightgallery.umd.js"></script>
 <script src="<?php echo  SITE_TEMPLATE_PATH ?>/assets/js/lightgallery.min.js"></script>
 <script src="<?php echo  SITE_TEMPLATE_PATH ?>/assets/js/sliders.js"></script>
-
 <script src="https://www.google.com/recaptcha/api.js?render=6LdT4V0oAAAAAAr-EBoz1vTtzOQmfzPcr4gn13Wa"></script>
 
 <script>
 	window.addEventListener("load", () => {
 		const form = document.getElementById("form_feedback");
 		let mess = document.querySelector(".response");
-
 		let isLoading = false;
 
 		form.addEventListener("submit", (event) => {
@@ -444,8 +442,9 @@ use Bitrix\Main\UI\Extension;
 			// 			el.style.borderColor = "#da4c4c";
 			// 		}
 			// 	})
-			// 	mess.style.backgroundColor = "#cfb595"
+			// 
 			// }
+			mess.style.backgroundColor = "#cfb595"
 			mess.innerHTML = "Ваше сообщение успешно отправлено!";
 		});
 	});
