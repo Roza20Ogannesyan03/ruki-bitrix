@@ -119,6 +119,9 @@ button {
   justify-content: flex-end;
   height: 35px;
 }
+.close__img {
+  cursor: pointer;
+}
 .modal__title {
   font-family: "Playfair Display";
   font-size: 24px;
@@ -783,6 +786,7 @@ label {
   font-family: "Montserrat";
   font-size: 15px;
   line-height: 20px;
+  text-align: center;
 }
 .network__icons {
   display: flex;
