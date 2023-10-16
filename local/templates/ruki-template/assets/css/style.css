@@ -1056,17 +1056,6 @@ label {
     max-width: 1024px;
   }
 }
-@media (max-width: 1200px) {
-  .contacts__item {
-    display: none;
-  }
-  .feedback-btn {
-    margin: 0;
-  }
-  .contacts {
-    order: 1;
-  }
-}
 @media (max-width: 1010px) {
   .promotion {
     background-position: left;
@@ -1087,7 +1076,7 @@ label {
     left: 49%;
   }
 }
-@media (max-width: 953px) {
+@media (max-width: 830px) {
   .menu {
     order: -1;
   }
@@ -1113,6 +1102,9 @@ label {
   }
   .footer__container {
     flex-direction: column;
+  }
+  .contacts {
+    align-items: center;
   }
 }
 
@@ -1194,6 +1186,7 @@ label {
   .studio {
     margin: 50px 0;
   }
+
   .bouquet__background {
     margin: 50px 0;
   }
@@ -1356,6 +1349,8 @@ label {
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .breadcrumbs__item {
   font-family: "Montserrat";
@@ -1391,6 +1386,7 @@ label {
   font-weight: 400;
   font-size: 32px;
   line-height: 43px;
+  text-align: center;
 }
 
 .container-small {
@@ -1402,6 +1398,10 @@ label {
   display: flex;
   flex-direction: column;
   margin: 48px 0 100px;
+}
+.lg-outer * {
+  color: #adabab;
+  font-weight: 600;
 }
 .studio__item {
   display: flex;
@@ -1671,6 +1671,9 @@ h3 {
   font-size: 32px;
   line-height: 120%;
   padding-bottom: 40px;
+}
+.main-text_block ul {
+  background-color: #f7f7f7;
 }
 .main-text_block h2 {
   font-size: 40px;
