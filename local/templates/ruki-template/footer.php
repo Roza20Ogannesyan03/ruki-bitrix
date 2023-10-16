@@ -206,7 +206,9 @@ use Bitrix\Main\UI\Extension;
 <? endif; ?>
 
 <? if ($APPLICATION->GetCurPage(false) !== '/') : ?>
+
 	</div>
+	</section>
 <? endif; ?>
 
 
